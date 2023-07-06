@@ -1,0 +1,186 @@
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --gradient: linear-gradient(to bottom, #1f2630, #1d242e, #1b222c, #19202a, #171e28);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Overpass', sans-serif;
+    font-size: 62.5%;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-blue);
+}
+
+.container{
+    background-image: var(--gradient);
+    height: 417px;
+    width: 413px;
+    padding: 31px 33px;
+    border-radius: 25px;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: space-between; */
+}
+
+.container__icon{
+    width: 49px;
+    height: 49px;
+    background-color: var(--dark-blue);
+    display: inline-block;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 33px;
+}
+
+.container h1{
+    color: var(--white);
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+    word-spacing: 1.5px;
+}
+
+.container p{
+    color: var(--medium-grey);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-bottom: 28px;
+    word-spacing: 0.25px;
+}
+
+.container__punctuation{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+}
+
+.container__punctuation div{
+    background-color: var(--dark-blue);
+    color: var(--medium-grey);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+}
+
+.container__punctuation label{
+    position: absolute;
+    z-index: 10;
+}
+
+.container__punctuation input{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type=radio]{
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+}
+
+.container__punctuation input:hover{
+    background-color: var(--orange);
+}
+
+.container__punctuation input:hover+label{
+    color: var(--white);
+    font-weight: 700;
+}
+
+.container__punctuation input:checked{
+    background-color: var(--medium-grey);
+}
+
+.container__punctuation input:checked+label{
+    color: var(--white);
+    font-weight: 700;
+}
+
+.container a{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+    color: var(--white);
+    height: 45px;
+    border-radius: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    width: 98.5%;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container a:hover{
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+/* THANKS */
+
+.container-thanks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 35px 35px;
+    padding-top: 45px;
+}
+
+.container-thanks__result{
+    color: var(--orange);
+    font-size: 1.5rem;
+    background-color: var(--dark-blue);
+    border-radius: 25px;
+    margin-top: 31px;
+    height: 32px;
+    width: 56%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+    /* word-spacing: 0.5px; */
+}
+
+.container-thanks p{
+    margin-bottom: 0;
+    word-spacing: 0.8px;
+}
+
+.container-thanks h1{
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
