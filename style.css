@@ -30,6 +30,7 @@ main{
     background-image: var(--gradient);
     height: 417px;
     width: 413px;
+    min-width: 320px;
     padding: 31px 33px;
     border-radius: 25px;
     /* display: flex;
@@ -68,6 +69,7 @@ main{
 .container__punctuation{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 33px;
 }
 
@@ -126,7 +128,7 @@ input[type=radio]{
     font-weight: 700;
 }
 
-.container a{
+.container button{
     border: none;
     display: flex;
     justify-content: center;
@@ -141,10 +143,9 @@ input[type=radio]{
     width: 98.5%;
     font-weight: 700;
     cursor: pointer;
-    text-decoration: none;
 }
 
-.container a:hover{
+.container button:hover{
     background-color: var(--white);
     color: var(--orange);
 }
@@ -162,7 +163,7 @@ input[type=radio]{
 
 .container-thanks__result{
     color: var(--orange);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     background-color: var(--dark-blue);
     border-radius: 25px;
     margin-top: 31px;
@@ -172,7 +173,7 @@ input[type=radio]{
     align-items: center;
     justify-content: center;
     margin-bottom: 35px;
-    /* word-spacing: 0.5px; */
+    padding-top: 3px;
 }
 
 .container-thanks p{
@@ -183,4 +184,63 @@ input[type=radio]{
 .container-thanks h1{
     font-size: 2.8rem;
     margin-bottom: 10px;
+}
+
+@media(max-width: 375px){
+    .container{
+        min-width: 320px;
+        width: 327px;
+        padding: 24px 24px;
+        height: 355px;
+    }
+    .container__icon{
+        width: 38px;
+        height: 38px;
+        margin-bottom: 19px;
+    }
+    .container__icon svg{
+        margin: 0 auto;
+        transform: scale(0.85);
+    }
+    .container h1{
+        font-size: 2.3rem;
+    }
+    .container p{
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        margin-bottom: 24px;
+    }
+    .container__punctuation{
+        margin-bottom: 25px;
+    }
+    .container__punctuation div{
+        width: 42px;
+        height: 42px;
+        font-size: 1.5rem;
+        align-items: center;
+    }
+    .container__punctuation input{
+        width: 42px;
+        height: 42px;
+    }
+    .container button{
+        font-size: 1.2rem;
+    }
+    .container-thanks{
+        padding: 18px 24px;
+        padding-top: 26px;
+    }
+    .container-thanks svg{
+        margin: 0 auto;
+        transform: scale(0.85);
+    }
+    .container-thanks__result{
+        font-size: 1.4rem;
+        margin-top: 15px;
+        margin-bottom: 28px;
+        width: 60%;
+    }
+    .container-thanks p{
+        margin-bottom: 0;
+    }
 }
